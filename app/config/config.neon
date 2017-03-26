@@ -18,3 +18,5 @@ security:
 
 services:
 	router: App\RouterFactory::createRouter
+	-	App\Forms\FormFactory
+	-	App\Forms\ManageFormFactory

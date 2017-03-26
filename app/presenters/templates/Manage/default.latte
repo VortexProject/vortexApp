@@ -1,0 +1,29 @@
+{block content}
+	<h1 n:block="title">Action management</h1>
+
+
+	{ifset $userInfo}
+		<table>
+			<tbody>
+				<tr>
+					<td>Name</td>
+					<td>{$userInfo->firstname} {$userInfo->lastname}</td>				
+				</tr>
+				<tr>
+					<td>Username</td>
+					<td>{$userInfo->username}</td>				
+				</tr>
+				<tr>
+					<td>Serial number</td>
+					<td>{$userInfo->serial_number}</td>
+				</tr>
+			</tbody>
+		</table>
+
+	<div>
+		<a n:href="Manage:chargePoints">Charge points</a>
+	</div>
+
+	{/ifset}
+
+{/block}

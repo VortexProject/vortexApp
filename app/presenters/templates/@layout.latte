@@ -10,21 +10,10 @@
 </head>
 
 <body>
-	<ul class="navig">
-		<li><a n:href="Homepage:">Homepage</a></li>
-		{block navig}{/block}
-		{if $user->loggedIn}
-			<li><a n:href="Sign:out">Sign out</a></li>
-		{else}
-			<li><a n:href="Sign:in">Sign in</a></li>
-		{/if}
-	</ul>
 
 	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
 
 	{include content}
-
-	<p class="footer">This is a <a href="http://doc.nette.org/quickstart">Nette Framework Quick Start</a>.</p>
 
 	{block scripts}
 	<script src="https://nette.github.io/resources/js/netteForms.min.js"></script>
